@@ -9,7 +9,7 @@ body {
   background-color: lightblue;
     color: white;
     font-family: 'Arvo', serif;
-    
+
 }
 
 
@@ -120,11 +120,20 @@ ul {
     height: 100%;
 }
 
+
 @media screen and (max-width: 1000px) {
   .dashboard {
-     width:400px;
+     width:750px;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .dashboard {
+     width:300px;
+  }
+}
+
+
 
 @media screen and (max-width: 1000px) {
   body {
@@ -134,7 +143,7 @@ ul {
 
 @media screen and (max-width: 1000px) {
   .overlay {
-    height:1200px;
+    height:1500px;
   }
 }
 
