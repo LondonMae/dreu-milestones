@@ -81,6 +81,8 @@ ul {
   margin-left:0;
   padding: 10px;
   position:absolute;
+  color: black;
+  background-color: white;
 }
 
 
@@ -95,6 +97,7 @@ ul {
     margin-left:0;
     padding: 10px;
     position:absolute;
+    line-height: 15px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -150,5 +153,32 @@ ul {
 @media screen and (max-width: 1000px) {
   .dashboard {
     height:1000px;
+  }
+}
+
+
+
+table, td, th {
+  border: 1px solid #ddd;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+}
+
+th, td {
+  padding: 15px;
+}
+
+td:hover {
+  background-color: white;
+  color:black;
+}
+
+@media screen and (max-width: 750px) {
+  th,td {
+    padding: 5px;
   }
 }
