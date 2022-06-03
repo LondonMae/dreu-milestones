@@ -162,6 +162,7 @@ ul {
 @media screen and (max-height: 600px) {
   .overlay {
      height:600px;
+     width:1000px;
   }
 }
 
