@@ -137,6 +137,7 @@ ul {
 }
 
 
+
 .overlay {
   z-index: -1;
     background-color: black;
@@ -171,7 +172,7 @@ ul {
 
 @media screen and (max-width: 750px) {
   .dashboard {
-     width:400px;
+     width:500px;
   }
 }
 
