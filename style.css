@@ -136,6 +136,17 @@ ul {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .project,.updates,.mentour,.me {
+     top:auto;
+     position: relative;
+     width:60%;
+     padding:auto;
+     margin:auto;
+     margin-bottom:15px;
+     right:0px;
+  }
+}
 
 
 .overlay {
