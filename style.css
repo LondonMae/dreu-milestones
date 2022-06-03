@@ -29,16 +29,19 @@ ul {
 .nav-menu {
   font-size: 32px;
   font-family: 'Arvo', serif;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 #name {
   font-size: 32px;
   padding-left: 10px;
   font-size: 24px;
+  width:200px;
 }
+
+
 
 .navbar {
   color: white;
@@ -100,6 +103,10 @@ ul {
     line-height: 15px;
 }
 
+.project,.updates,.mentour,.me {
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1000px) {
   .project,.updates,.mentour,.me {
      top:auto;
@@ -107,7 +114,7 @@ ul {
      position: relative;
      width:90%;
      padding:auto;
-     margin:auto;
+     margin:15px;
   }
 }
 
@@ -159,7 +166,7 @@ ul {
 
 
 table, td, th {
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
 }
 
 table {
@@ -172,6 +179,10 @@ th, td {
   padding: 15px;
 }
 
+td {
+  transition: 0.3s;
+}
+
 td:hover {
   background-color: white;
   color:black;
@@ -181,4 +192,8 @@ td:hover {
   th,td {
     padding: 5px;
   }
+}
+
+#update {
+  display: none;
 }
