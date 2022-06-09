@@ -5,8 +5,18 @@ var updates = {
 function displayUpdate(key) {
   var curr =  document.getElementById("stuff");
   var next = document.getElementById("update");
-  next.innerHTML += "<h1 class = 'dropdown'> " + key + " </h1>";
-  next.innerHTML += updates[key];
+  next.innerHTML = "<h1 class = 'dropdown'> " + key + " </h1>";
+  var list = "";
+  for(var week in updates) {
+    // list += "<li id = '" + week + "l'>" + week + "</li>";
+    // li = document.getElementById(week);
+    // console.log(li);
+    // li.addEventListener("click", function(){ displayUpdate(this.id);
+    // console.log(this.id)}, false);
+  }
+  next.innerHTML += "<ul class = 'dropdown-content'>" + list + "</ul>"
+  next.innerHTML += "<p>" + updates[key] + "</p>";
+  console.log(next.innerHTML);
   curr.style.display="none";
   next.style.display = "inline"
 }
