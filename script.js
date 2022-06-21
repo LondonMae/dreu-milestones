@@ -3,27 +3,25 @@ var updates = {
   "Week Two": "I arrived in Delaware on Sunday night and started working in the actual lab on Monday. In the begginning of the week I got my bearings around campus and toured the lab space. I countinued the work from before arriving to delaware and I met everybody else working in the lab. My tasks included extending the keylogger to store computed attributes such as average delay time (time between end of one action and start of another), keys per minute, and average length of keystroke. I coded an additional python script to store the collected keyboard actions in a csv file and stored the additional computed attributes in another CSV file. I also read three interesting research papers, focusing on limitations with facial recognition to predict emotions and the use of context to improve these predictions. My next tasks involve implementing a mouse logger in a similar way to the keylogger and looking more into past research on the use of context to improve emotion detection. \n Update: I implemented the mouse logger as well, and I ran the key and mouse logger in parallel using pythons multiprocessing library to see how it will be implemented. It was cool to see my code coming together in the test file. Next week I will try to run more tests on the individual functions to make sure the computations are correct and also add options to look at the attributes over intervals of time rather than other the entire session. We also discussed visualizing the data.", "Week Three": "This week in the lab we are working on integrating all of our technologies into one executable so we can begin small pilot testing. I set up visualizations of my key and mouse logging data, which provided interesting insight. I could also use these visualizations to confirm that my attributes produced accurate numbers/to test my code. One issue I ran into was the way I initially implemented the mouse and keyboard listeners. This was a simple fix as I used a blocking method for the listeners instead of my non-blocking method. Because the threading of the listeners caused my application to slow down, I learned a lot about daemon threads and threading with python in general, which was fun to research. To make sure my code was optimized, I ran some tests on the cpu usage of my computer before and after running my application in the background. I let my code run on myself throughout the workday, which gave me a large dataset to visualize and test with. I am excited to get into the testing phase since most of the engineering phase is starting to piece together. Outside of the lab, I've been exploring Delaware and the east coast. Over the weekend I took a short trip to New York. I spent most of my time walking around Lower Manhattan and Brooklyn, eating food, and people watching. I haven't spent much time on the east coast, so it was a nice break/adventure away from work!"
 };
 
+var weeks = ["Week One", "Week Two", "Week Three"];
+
+var curr_slide = 0
+
 function displayUpdate(key) {
   var curr =  document.getElementById("stuff");
-  var next = document.getElementById("update");
-  next.innerHTML = "<h1 class = 'dropdown'> " + key + " </h1>";
-  var list = "";
-  for(var week in updates) {
-    // list += "<li id = '" + week + "l'>" + week + "</li>";
-    // li = document.getElementById(week);
-    // console.log(li);
-    // li.addEventListener("click", function(){ displayUpdate(this.id);
-    // console.log(this.id)}, false);
-  }
-  next.innerHTML += "<ul class = 'dropdown-content'>" + list + "</ul>"
-  next.innerHTML += "<p>" + updates[key] + "</p>";
+  var next = document.getElementById("journal");
+  var update = document.getElementById("update");
+  update.innerHTML = "<h1> " + key + " </h1>";
+  curr_slide = weeks.indexOf(key)
+  update.innerHTML += "<p>" + updates[key] + "</p>";
   console.log(next.innerHTML);
   curr.style.display="none";
   next.style.display = "inline"
+  update.style.display = "inline"
 }
 
 function displayMain() {
-  var curr =  document.getElementById("update");
+  var curr =  document.getElementById("journal");
   var next = document.getElementById("stuff");
   curr.style.display="none";
   next.style.display = "inline"
@@ -51,6 +49,23 @@ function generateTable() {
        }
    }
      table.appendChild(tr);
+
+}
+
+function nextWeek(i) {
+  curr_slide += i;
+  if (curr_slide >= weeks.length) {
+    curr_slide = 0;
+  }
+  if (curr_slide < 0) {
+    curr_slide = weeks.length-1;
+  }
+
+  var key = weeks[curr_slide];
+  update.innerHTML = "<h1> " + key + " </h1>";
+  curr_slide = weeks.indexOf(key)
+  update.innerHTML += "<p>" + updates[key] + "</p>";
+  console.log(next.innerHTML);
 
 }
 

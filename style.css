@@ -285,6 +285,28 @@ td:hover {
 
 
 
-#update {
+#journal {
   display: none;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  display: inline-block;
+  padding: 3px;
+  top:33px;
+  margin:0;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right:80px;
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left:80px;
 }
