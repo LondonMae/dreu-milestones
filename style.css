@@ -47,7 +47,7 @@ ul {
   font-size: 32px;
   padding-left: 10px;
   font-size: 24px;
-  width:200px;
+  width:100%;
 }
 
 
@@ -302,11 +302,11 @@ td:hover {
 .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
-  right:80px;
+  right:40px;
 }
 
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-  left:80px;
+  left:40px;
 }
