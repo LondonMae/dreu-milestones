@@ -38,9 +38,6 @@ ul {
 .nav-menu {
   font-size: 32px;
   font-family: 'Arvo', serif;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 #name {
@@ -48,6 +45,13 @@ ul {
   padding-left: 10px;
   font-size: 24px;
   width:100%;
+}
+
+#name:hover {
+  text-shadow: 0 0 8px #35393F; /* horizontal-offset vertical-offset 'blur' colour */
+  -moz-text-shadow: 0 0 8px #35393F;
+  -webkit-text-shadow: 0 0 8px #35393F;
+  cursor: pointer;
 }
 
 
@@ -169,7 +173,7 @@ ul {
 
 @media screen and (max-height: 600px) {
   .overlay {
-     height:600px;
+     height:2000px;
   }
 }
 
@@ -202,6 +206,19 @@ ul {
 @media screen and (max-width: 600px) {
   .dashboard {
      width:90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dashboard {
+     width:90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #title {
+     font-size: 20px;
+     width: 100%;
   }
 }
 
@@ -251,7 +268,7 @@ th, td {
 }
 
 td {
-  transition: 0.3s;
+  sition: 0.3s;
 }
 
 td:hover {
@@ -309,4 +326,13 @@ td:hover {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
   left:40px;
+}
+
+.arrow:hover {
+  border: solid #94E2FF;
+  border-width: 0 5px 5px 0;
+}
+
+.arrow {
+  sition: 0.3s;
 }
