@@ -178,6 +178,12 @@ ul {
 }
 
 @media screen and (max-height: 600px) {
+  .dashboard {
+     height:2000px;
+  }
+}
+
+@media screen and (max-height: 600px) {
   .navbar {
     background-color: #2e2e30;
     opacity: 1;
