@@ -173,7 +173,13 @@ ul {
 
 @media screen and (max-height: 600px) {
   .overlay {
-     height:2000px;
+     height:3000px;
+  }
+}
+
+@media screen and (max-height: 1000px) {
+  .overlay {
+     height:1200px;
   }
 }
 
@@ -247,7 +253,7 @@ ul {
 
 @media screen and (max-width: 1000px) {
   .overlay {
-    height:1500px;
+    height:3000px;
   }
 }
 
