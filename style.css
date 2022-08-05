@@ -1,6 +1,6 @@
 body {
   overflow: hidden;
-  overflow-y: auto;
+  overflow: auto;
   background-image: url("https://media.cntraveler.com/photos/61d326952fa588652312b9fb/16:9/w_2560%2Cc_limit/Boulder%2C%2520Colorado_W4B0MF.jpg");
    background-position: center center;
     background-repeat: no-repeat;
